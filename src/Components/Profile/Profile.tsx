@@ -1,54 +1,36 @@
-import React from "react";
+import * as React from "react";
 
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 
 import "./Profile.css";
+import { render } from "@testing-library/react";
 
-var Profile = () => {
-  var Name = "Артём Молокеев";
-  var Status = "Жив, Здоров";
-  var Id = 1;
-  var Reputation = 99999;
-  var Foto = require("file:///C:/MyWeb/client-side/src/Resources/1.jpg");
+import Foto from "./Components/Foto";
+import Login from "./Components/Login";
+import Reputation from "./Components/Reputation";
+import Subscribers from "./Components/Subscribers";
+import SubscribeButton from "./Components/SubscribeButton";
+import ProjectsButton from "./Components/ProjectsButton";
 
-  var add = () => {
-    console.log("add");
-  };
-  var edit = () => {
-    console.log("edit");
-  };
-  var settings = () => {
-    console.log("settings");
-  };
+function Profile(props) {
   return (
-    <div className="menu-plus-profile">
-      <div className="profile">
-        <div className="main_foto">
-          <img src={Foto} className="foto" />
-        </div>
-        <div className="info_block">
-          <div className="name">Имя: {Name}</div>
-          <div className="id">Номер: {Id}</div>
-          <div className="status">Статус: {Status}</div>
-          <div className="reputation">Репутация: {Reputation}</div>
-        </div>
+    <div>
+      <div>
+        <Foto id={props.id} />
+        <Login id={props.id} />
       </div>
-      <Menu
-        menuButton={
-          <MenuButton className="button">
-            <img className="button-img" src={Foto}></img>
-          </MenuButton>
-        }
-        transition
-      >
-        <MenuItem onClick={add}>Добавить</MenuItem>
-        <MenuItem onClick={edit}>Редактировать</MenuItem>
-        <MenuItem onClick={settings}>Настройки</MenuItem>
-      </Menu>
+      <div>
+        <Reputation id={props.id} />
+        <Subscribers id={props.id} />
+      </div>
+      <div>
+        <SubscribeButton id={props.id} />
+        <ProjectsButton id={props.id} />
+      </div>
     </div>
   );
-};
+}
 
 export default Profile;

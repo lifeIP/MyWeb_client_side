@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hi</h1>
-      <Profile />
+      <Profile id={158} />
     </div>
   );
 }
