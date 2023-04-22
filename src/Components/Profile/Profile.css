@@ -4,12 +4,26 @@
   box-sizing: border-box;
 }
 
+.main_case {
+  display: flex;
+  flex-direction: string;
+  box-sizing: border-box;
+}
+
+.case_foto_login {
+  margin-right: 25px;
+}
+
+/*
 .profile {
   display: flex;
   flex-direction: string;
   box-sizing: border-box;
 }
-.foto {
+
+
+
+/*.fo2to {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -54,16 +68,6 @@
   border-radius: 20px;
   background-color: #6b86a6;
 }
-.reputation {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 32px;
-  border-radius: 20px;
-  background-color: #6b86a6;
-}
 
 .button {
   display: flex;
@@ -80,4 +84,4 @@
   justify-content: center;
   max-width: 50px;
   max-height: 50px;
-}
+}*/

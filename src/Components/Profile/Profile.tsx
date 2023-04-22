@@ -1,33 +1,31 @@
 import * as React from "react";
 
-import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
-import "@szhsin/react-menu/dist/index.css";
-import "@szhsin/react-menu/dist/transitions/slide.css";
-
 import "./Profile.css";
-import { render } from "@testing-library/react";
-
-import Foto from "./Components/Foto";
-import Login from "./Components/Login";
-import Reputation from "./Components/Reputation";
-import Subscribers from "./Components/Subscribers";
-import SubscribeButton from "./Components/SubscribeButton";
-import ProjectsButton from "./Components/ProjectsButton";
+import Foto from "./Components/Foto/Foto";
+import Login from "./Components/Login/Login";
+import Reputation from "./Components/Reputation/Reputation";
+import Subscribers from "./Components/Subscribers/Subscribers";
+import SubscribeButton from "./Components/SubscribeButton/SubscribeButton";
+import SupportButton from "./Components/SupportButton/SupportButton";
 
 function Profile(props) {
   return (
-    <div>
-      <div>
+    <div className="main_case">
+      <div className="case_foto_login">
         <Foto id={props.id} />
         <Login id={props.id} />
       </div>
-      <div>
-        <Reputation id={props.id} />
-        <Subscribers id={props.id} />
-      </div>
-      <div>
-        <SubscribeButton id={props.id} />
-        <ProjectsButton id={props.id} />
+
+      <div className="case_parameters_buttons">
+        <div className="parameters">
+          <Reputation id={props.id} className="reputation" />
+          <Subscribers id={props.id} className="subscribers" />
+        </div>
+
+        <div className="buttons">
+          <SupportButton id={props.id} className="support_button" />
+          <SubscribeButton id={props.id} className="subscribe_button" />
+        </div>
       </div>
     </div>
   );
