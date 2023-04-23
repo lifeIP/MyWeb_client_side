@@ -1,18 +1,21 @@
 import React from "react";
 
-import Profile from "./Components/Profile/Profile";
-
 import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 
 import "./App.css";
 
+import Profile from "./Components/Profile/Profile";
+import ListCommand from "./Components/ListCommand/ListCommand";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
-      <Profile id={158} />
+      <div className="block-1">
+        <Profile id={158} />
+        <ListCommand id={158} />
+      </div>
     </div>
   );
 }
