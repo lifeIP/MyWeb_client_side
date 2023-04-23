@@ -4,7 +4,7 @@ import "./Login.css";
 function Login(props) {
   var Login = "lifeIP";
   return (
-    <div>
+    <div className={props.className}>
       <h2 className="login">{Login}</h2>
     </div>
   );

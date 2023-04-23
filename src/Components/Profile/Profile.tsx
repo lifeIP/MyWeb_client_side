@@ -12,8 +12,8 @@ function Profile(props) {
   return (
     <div className="main_case">
       <div className="case_foto_login">
-        <Foto id={props.id} />
-        <Login id={props.id} />
+        <Foto id={props.id} className="foto" />
+        <Login id={props.id} className="Login" />
       </div>
 
       <div className="case_parameters_buttons">
